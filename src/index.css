@@ -1,3 +1,6 @@
+/*mobile first, celular primeiro*/
+
+
 *{
     margin:0;
     padding: 0;
@@ -10,15 +13,18 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('/wpdesktop.jpg');
+    background-image: url('wpmobile3.jpg');
     background-position: inherit;
     background-repeat: no-repeat;
     background-attachment:  fixed;
     background-size: cover;
 }
 
-@media(width <= 590px){
+/*agora serve para desktop*/
+
+@media(width >= 590px){
     body{
-        background-image: url('wpmobile3.jpg');
+
+        background-image: url('/wpdesktop.jpg');
     }
 }
