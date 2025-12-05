@@ -4,21 +4,21 @@ import { api } from "./api/api";
 import { Card } from "./components/card";
 
 function App() {
-  const [data, setData] = useState([]);
-  const [searchName, setSearchName] = useState("")
-  const [searchPage, setSearchPage] = useState("")
+    const [data, setData] = useState([]);
+    const [searchName, setSearchName] = useState("")
+    const [searchPage, setSearchPage] = useState("")
 
 
-  useEffect(() => {
-    api
-      .get(`/character/?name=${searchName}&page=${searchPage}`)
-      .then((response) => {
-        setData(response.data.results);
-      })
-      .catch((error) => {
-        console.error("NÃO FOI POSSÍVEL ACESSAR API", error);
-      });
-  }, [searchName, searchPage]);
+    useEffect(() => {
+      api
+        .get(`/character/?name=${searchName}&page=${searchPage}`)
+        .then((response) => {
+          setData(response.data.results);
+        })
+        .catch((error) => {
+          console.error("NÃO FOI POSSÍVEL ACESSAR API", error);
+        });
+    }, [searchName, searchPage]);
 
   return (
     <>
