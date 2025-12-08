@@ -20,3 +20,4 @@ export const Card = ({image, name, species}) => {
         </div>
     )
 }
+
